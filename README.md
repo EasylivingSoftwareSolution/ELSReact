@@ -12,7 +12,11 @@
 
 Before you begin with the installation and usage of this project, ensure that you have the following prerequisites met:
 
-Node.js and npm: This project is built with React.js, and therefore requires Node.js and npm to be installed on your system. You can download and install Node.js from [here](https://nodejs.org/en/download). npm is usually included with Node.js installation.
+**Node.js and npm:** 
+
+This project is built with React.js, and therefore requires Node.js and npm to be installed on your system. You can download and install Node.js from [here](https://nodejs.org/en/download). npm is usually included with Node.js installation.
+
+Once you have met these prerequisites, you can proceed with the installation and setup of the project.
 
 ## Installation
 
@@ -38,7 +42,7 @@ npm install
 
 ## Usage
 
-5.After that you can run the project on your local machine:
+5. After that you can run the project on your local machine:
 
 ```bash
 npm start
