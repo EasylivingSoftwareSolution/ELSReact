@@ -1,4 +1,4 @@
-# EasyLiving Solutions(ELS)
+# EasyLiving Software Solution(ELS)
 
 ## Table of Contents
 
