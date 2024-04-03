@@ -18,7 +18,7 @@ Node.js and npm: This project is built with React.js, and therefore requires Nod
 
 To get started with the ELS project, follow these installation steps:
 
-1.Go to the directory where you want to create your project and clone the repo:
+1. Go to the directory where you want to create your project and clone the repo:
     
 ```bash
 git clone https://github.com/EasylivingSoftwareSolution/ELSReact.git
@@ -30,7 +30,7 @@ git clone https://github.com/EasylivingSoftwareSolution/ELSReact.git
 cd ELSReact/els
 ```
 
-3.Then Install project requirements:
+3. Then Install project requirements:
 
 ```bash
 npm install
