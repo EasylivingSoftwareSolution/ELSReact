@@ -65,8 +65,7 @@ const Home =()=>{
                 data-wow-delay=".2s">What We Do</h2>
             <hr class="w-16 h-1.5 bg-els-blue els-gradient-reverse mb-6 z-10"/>
 
-            <h3 class="mt-20 font-sans text-base leading-loose text-center md:text-lg text-els-gray-2 wow fadeIn" data-wow-delay=".15s">We build outstanding software applications for our customers to make them outstanding in the technology market while meeting their clients' needs. If you require software developers for your team, don't worry. We also outsource our software
-                engineers to clients who may need software development services like mobile application development.</h3>
+            <h3 class="mt-20 font-sans text-base leading-loose text-center md:text-lg text-els-gray-2 wow fadeIn" data-wow-delay=".15s">We build outstanding software applications for our customers to make them outstanding in the technology market while meeting their clients' needs. If you require relevance expertise for your team, don't worry. We also outsource our team of expertise to clients who may need our services.</h3>
 
             <div class="grid grid-cols-1 gap-8 my-20 md:grid-cols-2 md:m-20 sm:w-9/12">
                 <div class="flex h-auto pb-10 transition duration-300 rounded-md hover:shadow-lg hover:bg-opacity-90 ease-in-up card items-center justify-center sm:pb-10 wow fadeInUp" data-wow-delay=".2s">
@@ -77,8 +76,8 @@ const Home =()=>{
 						autoplay
 						/>
                     
-                    <h3 class="card-heading text-center">Design</h3>
-                    <p class="text-center card-content">We do top-notch software designs for our client's mobile UI/UX designs to meet market standards.</p>
+                    <h3 class="card-heading text-center">Machine Learning</h3>
+                    <p class="text-center card-content">We offer cutting-edge machine learning solutions tailored to unlock insights, optimize processes, and drive unprecedented growth..</p>
                 </div>
                 <div class="flex h-auto pb-10 transition duration-300 rounded-md hover:shadow-lg hover:bg-opacity-90 ease-in-up card items-center justify-center sm:pb-10 wow fadeInUp" data-wow-delay=".2s">
 				<Player
@@ -102,8 +101,8 @@ const Home =()=>{
 						/>
 					{/* <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_ztcdpayg.json" background="transparent" speed="1" style={{width: 150, height: 150}} loop autoplay>
                     </lottie-player> */}
-                    <h3 class="card-heading text-center">App Launch and Maintenance Operations</h3>
-                    <p class="text-center card-content">Source software engineers from our team for application launch and post-launch operations.</p>
+                    <h3 class="card-heading text-center">Data analytics and Data Science classes</h3>
+                    <p class="text-center card-content">Elevate your data literacy and analytical prowess with our expert-led data analytics and  classes.</p>
 
                 </div>
                 <div class="flex pb-10 transition duration-300 rounded-md hover:shadow-lg hover:bg-opacity-90 ease-in-up card items-center justify-center sm:pb-10 wow fadeInUp" data-wow-delay=".2s">
@@ -927,8 +926,8 @@ const Home =()=>{
                                                 <select name = "service" class="block w-full px-6 py-3 m-0 text-base transition ease-in-out bg-white bg-no-repeat border-none rounded shadow-form appearance-none form-select text-els-gray-2 bg-clip-padding focus:text-els-gray-2 focus:bg-white focus:border-els-blue focus:outline-none"
                                                     aria-label="Default select example">
 													<option selected>Website/ Mobile Application</option>
-													<option value="1">App Launch and Maintenance Operations</option>
-													<option value="2">Cloud Applications</option>
+													<option value="1">AI and Machine Learning</option>
+													<option value="2">Data Analytics and Science</option>
 													<option value="3">UI/UX Design</option>
 												</select>
                                                 <div class="absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 pointer-events-none">
