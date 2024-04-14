@@ -1,320 +1,84 @@
+import React,{useEffect} from "react";
+import Header from "../components/header/Header";
+import Head from "../components/header/Head";
+import DataSciencePic from '../images/ds1.jpg'
+import DataAnallyicsPic from '../images/da.png'
+import WOW from 'wowjs';
+import { initializeSlider } from "../js/slider";
 import '../css/styles.css';
 import '../css/animate.css';
-import Head from "../components/header/Head"
-import WOW from 'wowjs';
-import React, { useEffect } from 'react';
-import Header from '../components/header/Header';
-import SectionOne from '../images/illustrations/about_page_section_1.svg';
-import SectionTwo from '../images/illustrations/about_page_section_2.svg';
+import Illustrattion from "../images/home/landing-page-illustration.svg"
+import { Player } from '@lottiefiles/react-lottie-player';
+import DSlottie from '../packages/DSLottie.json';
+import { Link } from 'react-router-dom';
 import Logo from '../images/Els-logo-sample/pngs/els_alt.png'
+function DataCourses(){
 
+    useEffect(() => {
+		new WOW.WOW({
+			live: false
+		  }).init();
+	  }, []);
 
-function AboutUs(){
+    const Card = ({ title, content, pic,onButtonClick }) => (
+        <div className="bg-transparent rounded-lg shadow-md p-4">
+            <img src={pic} class="w-full object-cover self-center mb-4"/>
+          <h2 className="text-xl font-bold mb-2">{title}</h2>
+          <p className="text-gray-700">{content}</p>
+          <Link to={onButtonClick}>
+          <button
+            className="text-white mt-3 bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 shadow-sm mr-auto mt-auto"
+            >Explore Course</button>
+            </Link>
+        </div>
+      );
 
     return(<>
-    		{<Head/>}
-        <body class="overflow-x-hidden bg-white" >
-        {<Header/>}
 
-<main id="butter">
-        <section class="relative z-10 pt-[150px] overflow-hidden px-8 mx-auto md:px-12 lg:px-24">
-            <div class="container">
-                <div class="flex flex-wrap items-center mx-[-16px]">
-                    <div class="w-full px-4 md:w-full lg:w-full">
-                        <div class="intro">
-                            <h3 class="font-sans text-base leading-loose  mt-0 text-center md:text-lg text-els-gray-2 wow fadeIn" data-wow-delay=".15s">
-                                ELS is an entirely remote software development company.ELS has shown tremendous growth and positive remarks from its customers and is highly focused on building scalable software while setting trends in the makert.
-                            </h3>
-                        </div>
-                        <div class="max-w-full mb-12 md:mb-0">
-                            <h1 class="my-6 text-2xl sm:text-4xl
-					md:text-[45px]
-					lg:text-4xl
-					xl:text-[45px] font-bold text-black">
-                                Our Vision
-                            </h1>
-                            <h3 class=" font-sans text-base leading-loose text-center mt-0 md:text-lg text-els-gray-2 wow fadeIn" data-wow-delay=".15s">
-                                To build custom software for our clients, ensuring we employ our innovativeness and creativity to certain scalability in this software. To provide a pool of highly trained and skilled full-stack developers for outsourcing to companies and startups.
-                            </h3>
-                        </div>
-                    </div>
+    {<Head/>}
+        <body class="overflow-x-hidden bg-white mx-auto" >
+    {<Header/>}
+    {/* <section class="relative md:h-screen flex items-center w-full px-8 mx-auto md:px-12 lg:px-24 pt-[120px] pb-[110px]
+        md:pt-[150px] md:pb-[120px]
+        xl:pt-[180px] xl:pb-[160px]
+        2xl:pt-[210px] 2xl:pb-[200px] bg-gradient-to-b from-els-light-blue2 to-white"> */}
+    
+    <section class="bg-gradient-to-b from-els-light-blue2 to-white">
+    <div class="grid sm:grid-cols-2 my-20 w-full bg-transparent p-10 ">
+         <div class=" my-auto">
+            <p class="font-serif text-black text-6xl mb-3">
+                Data Courses
+            </p>
+            <hr class="w-20 h-1.5 bg-els-blue els-gradient-reverse mb-6 z-10"/>
+            <p class="font-sans text-gray-500 text-2xl">
+                Unlock the door to boundless opportunities with our comprehensive data science and data analytics courses. <br></br>
+            Delve into the fundamentals of statistics, machine learning, and data visualization</p>
+         </div>
+         <div class="my-auto">
+         <Player
+            src={DSlottie}
+            className="w-3/4"
+            loop
+            autoplay
+            />
+         </div>
+    </div>
+    <div className="grid sm:grid-cols-2 my-5 gap-4 lg:mx-20 xl:mx-20">
+      <Card 
+      title="Data Science" 
+      content="Our data science course equips you with the necessary skills to tackle real-world challenges. You'll learn data wrangling and analysis techniques, delve into the fundamentals of machine learning, and gain proficiency in Python programming, the language of data science." 
+      pic={DataSciencePic}
+      onButtonClick='/datascience'/>
 
+      <Card 
+      title="Data Analytics" 
+      content="Our data analytics course equips you with the tools to transform raw data into actionable insights.  Learn essential skills like data cleaning, analysis, and visualization to make data-driven decisions.  We'll cover in-demand platforms such Excel, PowerBI and SQL.." 
+      pic={DataAnallyicsPic}
+      onButtonClick='/dataanalytics'/>
+    </div>
 
-                </div>
-            </div>
-            <div>
-                <span class="absolute top-0 left-0 z-[-1]">
-					<svg width="287" height="254" viewBox="0 0 287 254" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path opacity="0.1" d="M286.5 0.5L-14.5 254.5V69.5L286.5 0.5Z"
-							fill="url(#paint0_linear_111:578)" />
-						<defs>
-							<linearGradient id="paint0_linear_111:578" x1="-40.5" y1="117" x2="301.926" y2="-97.1485"
-								gradientUnits="userSpaceOnUse">
-								<stop stop-color="#1e8de1" />
-								<stop offset="1" stop-color="#1e8de1" stop-opacity="0" />
-							</linearGradient>
-						</defs>
-					</svg>
-				</span>
-                <span class="absolute right-0 top-0 z-[-1]">
-					<svg width="628" height="258" viewBox="0 0 628 258" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path opacity="0.1" d="M669.125 257.002L345.875 31.9983L524.571 -15.8832L669.125 257.002Z"
-							fill="url(#paint0_linear_0:1)" />
-						<path opacity="0.1" d="M0.0716344 182.78L101.988 -15.0769L142.154 81.4093L0.0716344 182.78Z"
-							fill="url(#paint1_linear_0:1)" />
-						<defs>
-							<linearGradient id="paint0_linear_0:1" x1="644" y1="221" x2="429.946" y2="37.0429"
-								gradientUnits="userSpaceOnUse">
-								<stop stop-color="#1e8de1" />
-								<stop offset="1" stop-color="#1e8de1" stop-opacity="0" />
-							</linearGradient>
-							<linearGradient id="paint1_linear_0:1" x1="18.3648" y1="166.016" x2="105.377" y2="32.3398"
-								gradientUnits="userSpaceOnUse">
-								<stop stop-color="#1e8de1" />
-								<stop offset="1" stop-color="#1e8de1" stop-opacity="0" />
-							</linearGradient>
-						</defs>
-					</svg>
-				</span>
-            </div>
-        </section>
-        {/* <!-- ====== Breadcrumb section end -->
-
-        <!-- ====== About Section 1 Start --> */}
-        <section class="pt-[120px] px-8 mx-auto md:px-12 lg:px-24">
-            <div class="container">
-                <div class="
-		  pb-[100px] border-b border-els-blue border-opacity-[0.15]
-		">
-                    <div class="flex flex-wrap items-center mx-[-16px]">
-                        <div class="w-full px-4 lg:w-1/2">
-                            <div class="mb-12 lg:mb-0 max-w-[570px] wow fadeInUp" data-wow-delay=".15s">
-                                <h2 class="
-				  text-black
-				  font-bold text-3xl
-				  sm:text-4xl
-				  md:text-[45px]
-				  lg:text-4xl
-				  xl:text-[45px]
-				  leading-tight
-				  sm:leading-tight
-				  md:leading-tight
-				  lg:leading-tight
-				  xl:leading-tight
-				  mb-6
-				">
-                                    High quality software products
-                                </h2>
-                                <p class="text-base font-normal leading-relaxed text-black text-opacity-40 sm:text-lg sm:leading-relaxed mb-11">
-
-                                </p>
-                                <div class="flex flex-wrap -mx-3">
-                                    <div class="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                                        <p class="flex items-center mb-5 text-lg font-normal text-els-description">
-                                            <span class="
-						w-[30px]
-						h-[30px]
-						flex
-						items-center
-						justify-center
-						rounded-md
-						bg-els-blue
-						bg-opacity-10
-						text-els-blue
-						mr-4
-					  ">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-													fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-													<path
-														d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-												</svg>
-											</span> High Quality Software Applications
-                                        </p>
-                                        <p class="flex items-center mb-5 text-lg font-normal text-els-description">
-                                            <span class="
-						w-[30px]
-						h-[30px]
-						flex
-						items-center
-						justify-center
-						rounded-md
-						bg-els-blue
-						bg-opacity-10
-						text-els-blue
-						mr-4
-					  ">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-													fill="currentColor" class="bi bi-stack" viewBox="0 0 16 16">
-													<path
-														d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.598.598 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.598.598 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.598.598 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535L7.733.063z" />
-													<path
-														d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.598.598 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.659z" />
-												</svg>
-											</span> Any tech stack
-                                        </p>
-                                        <p class="flex items-center mb-5 text-lg font-normal text-els-description">
-                                            <span class="
-						w-[30px]
-						h-[30px]
-						flex
-						items-center
-						justify-center
-						rounded-md
-						bg-els-blue
-						bg-opacity-10
-						text-els-blue
-						mr-4
-					  ">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-													fill="currentColor" class="bi bi-alarm-fill" viewBox="0 0 16 16">
-													<path
-														d="M6 .5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H9v1.07a7.001 7.001 0 0 1 3.274 12.474l.601.602a.5.5 0 0 1-.707.708l-.746-.746A6.97 6.97 0 0 1 8 16a6.97 6.97 0 0 1-3.422-.892l-.746.746a.5.5 0 0 1-.707-.708l.602-.602A7.001 7.001 0 0 1 7 2.07V1h-.5A.5.5 0 0 1 6 .5zm2.5 5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5zM.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.035 8.035 0 0 0 .86 5.387zM11.613 1.86a2.5 2.5 0 1 1 3.527 3.527 8.035 8.035 0 0 0-3.527-3.527z" />
-												</svg>
-											</span> 24/7 support
-                                        </p>
-                                    </div>
-                                    <div class="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                                        <p class="flex items-center mb-5 text-lg font-normal text-els-description">
-                                            <span class="
-						w-[30px]
-						h-[30px]
-						flex
-						items-center
-						justify-center
-						rounded-md
-						bg-els-blue
-						bg-opacity-10
-						text-els-blue
-						mr-4
-					  ">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-													fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-													<path
-														d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-												</svg>
-											</span> 100% quality
-                                        </p>
-                                        <p class="flex items-center mb-5 text-lg font-normal text-els-description">
-                                            <span class="
-						w-[30px]
-						h-[30px]
-						flex
-						items-center
-						justify-center
-						rounded-md
-						bg-els-blue
-						bg-opacity-10
-						text-els-blue
-						mr-4
-					  ">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-													fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
-													<path
-														d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-													<path fill-rule="evenodd"
-														d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
-													<path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
-												</svg>
-											</span> Dedicated Team
-                                        </p>
-                                        <p class="flex items-center mb-5 text-lg font-normal text-els-description">
-                                            <span class="
-						w-[30px]
-						h-[30px]
-						flex
-						items-center
-						justify-center
-						rounded-md
-						bg-els-blue
-						bg-opacity-10
-						text-els-blue
-						mr-4
-					  ">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-													fill="currentColor" class="bi bi-file-earmark-check-fill"
-													viewBox="0 0 16 16">
-													<path
-														d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zm1.354 4.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
-												</svg>
-											</span> Industry Standards
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full px-4 lg:w-1/2">
-                            <div class="flex items-center text-center lg:text-right wow fadeInUp" data-wow-delay=".2s">
-                                <img src={SectionOne} alt="about-image" class="items-center
-				justify-center max-w-full lg:mr-0 w-11/12 hover:animate__pulse" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        {/* <!-- ====== About Section 1 End -->
-
-
-        <!-- ====== About Section 2 Start --> */}
-
-        <section class="pt-[100px] pb-[120px]">
-            <div class="container">
-                <div class="flex flex-wrap items-center mx-[-16px]">
-                    <div class="w-full px-4 lg:w-1/2">
-                        <div class="flex items-center mb-12 text-center lg:text-left lg:mb-0 wow
-			fadeInUp
-		  " data-wow-delay=".15s">
-                            <img src={SectionTwo} alt="about image" class="items-center
-			  justify-center max-w-full mx-auto lg:ml-0 w-3/4" />
-                        </div>
-                    </div>
-                    <div class="w-full px-4 lg:w-1/2">
-                        <div class="max-w-full wow fadeInUp" data-wow-delay=".2s">
-                            <div class="mb-9">
-                                <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">
-                                    Hire Our Developers
-                                </h3>
-                                <p class="text-base font-normal leading-relaxed text-black text-opacity-40 sm:text-lg sm:leading-relaxed">
-                                    Are you a company or startup looking for skilled software engineers? Get fullstack developers from our team of highly trained and proficient software engineers.
-                                </p>
-                            </div>
-                            <div class="mb-9">
-                                <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">
-                                    24Hr Support
-                                </h3>
-                                <p class="text-base font-normal leading-relaxed text-black text-opacity-40 sm:text-lg sm:leading-relaxed">
-                                    Do you have queries that you would want our customer care team attend to? Reach us through our official email at
-                                    <span class="font-medium"><a href="mailto: contact@elssoftwaresolutions.com"> contact@elssoftwaresolutions.com</a></span> or number at <span class="font-medium"> <a href="tel:+">+254 768 384 224</a> </span>
-                                </p>
-                            </div>
-                            <div class="mb-1">
-                                <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">
-                                    Bug Free code
-                                </h3>
-                                <p class="text-base font-normal leading-relaxed text-black text-opacity-40 sm:text-lg sm:leading-relaxed">
-                                    We employ DevOps to ensure a seamless transition from development to production of our applications
-                                </p>
-                            </div>
-                            {/* <!-- <div class="mb-1">
-                                <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">
-                                    Customer Care
-                                </h3>
-                                <p class="text-base font-normal leading-relaxed text-black text-opacity-40 sm:text-lg sm:leading-relaxed">
-                                    Our help center is always ready to answer any of your inquiries all through the week at any time you have a question.
-                                </p>
-                            </div> --> */}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        {/* <!-- ====== About Section 2 End -->
-
-
-        <!-- Footer -->
-        <!-- Footer --> */}
-
-        <footer class="relative z-10 bg-els-light-blue2 pt-[100px]">
+    </section>
+    <footer class="relative z-10 bg-els-light-blue2 pt-[100px]">
             <div class="px-8 md:px-12 lg:px-24">
                 <div class="flex flex-wrap mx-[-16px]">
                     <div class="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-4/12">
@@ -557,10 +321,13 @@ function AboutUs(){
             </div>
 
         </footer>
-    </main>
-    </body>
     
+    
+    
+    
+ 
+</body>
     </>)
 }
 
-export default AboutUs;
+export default DataCourses;

@@ -13,7 +13,7 @@ import Project1 from "../images/home/dashboard.webp"
 import Project2 from "../images/home/dashboard2.webp"
 import Project3 from "../images/home/mobile-project.webp"
 import Project4 from "../images/home/ecommerce project.webp"
-import Logo from "../images/Els-logo-sample/pngs/els_alt_big.png"
+import Logo from "../images/Els-logo-sample/pngs/els_alt.png"
 
 
 const Home =()=>{
@@ -92,6 +92,7 @@ const Home =()=>{
                     </p>
 
                 </div>
+				<a href='/datacourses'>
                 <div class="flex h-auto pb-10 mt-8 transition duration-300 rounded-md hover:shadow-lg hover:bg-opacity-90 ease-in-up card md:mt-0 items-center justify-center sm:pb-10 wow fadeInUp" data-wow-delay=".2s">
 				<Player
 						src='https://assets6.lottiefiles.com/packages/lf20_ztcdpayg.json'
@@ -105,6 +106,7 @@ const Home =()=>{
                     <p class="text-center card-content">Elevate your data literacy and analytical prowess with our expert-led data analytics and  classes.</p>
 
                 </div>
+				</a>
                 <div class="flex pb-10 transition duration-300 rounded-md hover:shadow-lg hover:bg-opacity-90 ease-in-up card items-center justify-center sm:pb-10 wow fadeInUp" data-wow-delay=".2s">
 				<Player
 						src='https://assets1.lottiefiles.com/packages/lf20_iaqdumdt.json'
@@ -1149,7 +1151,7 @@ const Home =()=>{
                 <div class="flex flex-wrap mx-[-16px]">
                     <div class="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-4/12">
                         <div class="mb-16 max-w-[360px]">
-                            <a href="index.html" class="inline-block mb-8">
+                            <a href="/" class="inline-block mb-8">
                                 <img src={Logo} alt="ELS logo"/>
                             </a>
                             <p class="text-base font-medium leading-relaxed text-els-description mb-9">
@@ -1245,7 +1247,7 @@ const Home =()=>{
                                 <hr class="w-16 h-1.5 bg-els-blue els-gradient-reverse mb-6 z-10"/>
                             </h2>
                             <ul>
-                                <li>
+                                {/* <li>
                                     <a href="https://goo.gl/maps/xNtCa7DL9pcSVAoe6" class="flex items-center mb-4 text-base font-medium text-els-description hover:text-els-blue">
                                         <span class="mr-3">
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -1257,7 +1259,7 @@ const Home =()=>{
 
                                         <span>Centurion, Juja, Kiambu</span>
                                     </a>
-                                </li>
+                                </li> */}
                                 <li>
                                     <a href="mailto:contact@elssoftwaresolutions.com" class="flex items-center mb-4 text-base font-medium text-els-description hover:text-els-blue">
                                         <span class="mr-3">
@@ -1269,7 +1271,7 @@ const Home =()=>{
 										</span>contact@elssoftwaresolutions.com
                                     </a>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <a href="tel:+254 768 384 224" class="flex items-center mb-4 text-base font-medium text-els-description hover:text-els-blue">
                                         <span class="mr-3">
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -1279,7 +1281,7 @@ const Home =()=>{
 											</svg>
 										</span>+254 768 384 224
                                     </a>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                     </div>
